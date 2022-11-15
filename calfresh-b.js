@@ -50,7 +50,7 @@ let width = 600,
   scales = {
     fill: d3.scaleQuantize()
       .domain([3000, 35000])
-      .range(d3.schemeGreens[9])
+      .range(d3.schemePurples[9])
   }
 
 function mouseover(d) {
@@ -89,5 +89,5 @@ function visualize_county(data) {
 d3.csv("calfresh.csv", d3.autoType)
   .then(visualize)
 
-d3.json("ca-counties.geojson")
+d3.json("counties.geojson")
   .then(visualize_county)
